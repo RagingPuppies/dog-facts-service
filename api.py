@@ -6,6 +6,7 @@ import os
 app = Flask(__name__)
 api = Api(app)
 url = os.getenv("DOGS_URL")
+
 class GetDogFact(Resource):
     def get(self):
         fact_list = requests.get("http://dogfacts:5000/api/v1/resources/dogs/all").json()
