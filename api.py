@@ -9,7 +9,7 @@ url = os.getenv("DOGS_URL")
 
 class GetDogFact(Resource):
     def get(self):
-        fact_list = requests.get("http://dogfacts:5000/api/v1/resources/dogs/all").json()
+        fact_list = requests.get(url).json()
         random_fact = random.choice(fact_list)['fact']
         return {'fact': str(random_fact)}
 
