@@ -5,7 +5,7 @@ import random
 import os
 app = Flask(__name__)
 api = Api(app)
-url = os.getenv("DOGS_URL")
+url = "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all"
 
 class GetDogFact(Resource):
     def get(self):
